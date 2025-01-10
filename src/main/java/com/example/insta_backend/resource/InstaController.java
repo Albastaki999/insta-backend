@@ -18,6 +18,12 @@ public class InstaController {
 
     @Autowired
     InstaRepository instaRepository;
+    @GetMapping("/")
+    public String blah() {
+        // return new String();
+        return "hello";
+    }
+    
 
     @PostMapping("/api/login")
     public ResponseEntity<Map<String, String>> login(@RequestParam String username, @RequestParam String password) {
