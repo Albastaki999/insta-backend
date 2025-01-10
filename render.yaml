@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: spring-boot-backend
+    env: docker
+    buildCommand: docker build -t spring-boot-backend .
+    startCommand: docker run -p 8080:8080 spring-boot-backend
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: production
